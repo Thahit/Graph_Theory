@@ -31,15 +31,14 @@ def find_bridges(Graph: list):
     return bridges
 
 if __name__ == "__main__":
-    # need a directed graph (works with (negative) cycles):
-    #now a different form to represent Graphs:
+    # need an undirected graph (works with (negative) cycles):
     # an adj. matrix (inf weight = not connected)
-    Graph = [[2, -1, 3, float("inf"), float("inf"), float("inf")],# this graph is undirected-> needs to be symetric
+    Graph = [[0, -1, 3, float("inf"), float("inf"), float("inf")],# this graph is undirected-> needs to be symetric
              [-1, 0, 2, float("inf"), 2, float("inf")],
              [3, 2, 0, float("inf"), float("inf"), float("inf")],
              [float("inf"), float("inf"), float("inf"), 0, 6, 2],
              [float("inf"), 2, float("inf"), 6, 0, float("inf")],
-             [float("inf"), float("inf"), float("inf"), float("inf"), 2, 0],
+             [float("inf"), float("inf"), float("inf"), 2, float("inf"), 0],
              ]
     n = 6# number of notes(you can also get this from the graph)
 
